@@ -76,16 +76,19 @@ public class MAIN extends javax.swing.JFrame {
         BTN_MODIFICARVIVOS = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         t1 = new javax.swing.JTable();
+        jLabel14 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         t2 = new javax.swing.JTable();
         BTN_MODIFICARDESA = new javax.swing.JButton();
         BTN_ELIMINARDESA = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         t3 = new javax.swing.JTable();
         BTN_MODBOOGIES = new javax.swing.JButton();
         BTN_ELIMINARBOOGIES = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -370,6 +373,8 @@ public class MAIN extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(204, 255, 204));
 
+        jPanel5.setBackground(new java.awt.Color(153, 204, 255));
+
         BTN_ELIMINARVIVOS.setText("Eliminar");
         BTN_ELIMINARVIVOS.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -402,32 +407,44 @@ public class MAIN extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(t1);
 
+        jLabel14.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setText("Campistas Vivos");
+        jLabel14.setOpaque(true);
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(64, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BTN_MODIFICARVIVOS, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(34, 34, 34)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BTN_MODIFICARVIVOS)
+                .addGap(29, 29, 29)
                 .addComponent(BTN_ELIMINARVIVOS)
-                .addGap(27, 27, 27))
+                .addContainerGap())
+            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(132, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap(56, Short.MAX_VALUE)
+                .addContainerGap(20, Short.MAX_VALUE)
+                .addComponent(jLabel14)
+                .addGap(31, 31, 31)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addGap(33, 33, 33)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BTN_ELIMINARVIVOS)
-                    .addComponent(BTN_MODIFICARVIVOS))
-                .addGap(24, 24, 24))
+                    .addComponent(BTN_MODIFICARVIVOS)
+                    .addComponent(BTN_ELIMINARVIVOS))
+                .addGap(12, 12, 12))
         );
 
         jTabbedPane3.addTab("Campistas vivos", jPanel5);
+
+        jPanel6.setBackground(new java.awt.Color(153, 204, 255));
 
         t2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -466,6 +483,11 @@ public class MAIN extends javax.swing.JFrame {
             }
         });
 
+        jLabel15.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setText("Campistas Desaparecidos");
+        jLabel15.setOpaque(true);
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -475,23 +497,28 @@ public class MAIN extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BTN_MODIFICARDESA, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(34, 34, 34)
+                .addGap(46, 46, 46)
                 .addComponent(BTN_ELIMINARDESA)
-                .addGap(27, 27, 27))
+                .addGap(15, 15, 15))
+            .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap(56, Short.MAX_VALUE)
+                .addGap(24, 24, 24)
+                .addComponent(jLabel15)
+                .addGap(27, 27, 27)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BTN_ELIMINARDESA)
                     .addComponent(BTN_MODIFICARDESA))
-                .addGap(24, 24, 24))
+                .addGap(18, 18, 18))
         );
 
         jTabbedPane3.addTab("Campistas desaparecidos", jPanel6);
+
+        jPanel7.setBackground(new java.awt.Color(102, 0, 0));
 
         t3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -525,25 +552,35 @@ public class MAIN extends javax.swing.JFrame {
             }
         });
 
+        jLabel16.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("BoogiesWoogies");
+        jLabel16.setOpaque(true);
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap(64, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BTN_MODBOOGIES, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(34, 34, 34)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BTN_MODBOOGIES)
+                .addGap(18, 18, 18)
                 .addComponent(BTN_ELIMINARBOOGIES)
-                .addGap(27, 27, 27))
+                .addGap(18, 18, 18))
+            .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(158, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap(56, Short.MAX_VALUE)
+                .addGap(24, 24, 24)
+                .addComponent(jLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BTN_ELIMINARBOOGIES)
                     .addComponent(BTN_MODBOOGIES))
@@ -622,6 +659,19 @@ public class MAIN extends javax.swing.JFrame {
             }
 
             CAMPISTAS x = new CAMPISTAS(tipo, estado, nombre, sexo, edad, armas);
+            
+            if (x.getEstado().equals("Vivo")) {
+                Object[] newrow = {x.getNombre(), x.getEdad(), x.getTipo(), x.getEstado()};
+                DefaultTableModel ta1 = (DefaultTableModel) t1.getModel();
+                ta1.addRow(newrow);
+                t1.setModel(ta1);
+            }else  if (x.getEstado().equals("Desaparecido")) {
+                Object[] newrow = {x.getNombre(), x.getEdad(), x.getTipo(), x.getEstado()};
+                DefaultTableModel ta2 = (DefaultTableModel) t2.getModel();
+                ta2.addRow(newrow);
+                t2.setModel(ta2);
+            }
+            
             campistas.add(x);
             JOptionPane.showMessageDialog(this, "El campista se agrego a la lista! ");
             
@@ -657,8 +707,19 @@ public class MAIN extends javax.swing.JFrame {
             }
             
             BoogieWoogie x = new BoogieWoogie(nombre,sexo,edad,armas,secuestados);
+            Object[] newrow = {x.getNombre(), x.getEdad(), x.getARMAS(), x.getSecuestrados()};
+            DefaultTableModel ta3 = (DefaultTableModel) t3.getModel();
+            ta3.addRow(newrow);
+            t3.setModel(ta3);
             secuestradores.add(x);
             JOptionPane.showMessageDialog(this, "El BoogieWoogie se agrego a la lista! ");
+            
+            //limpia
+            TF_NOMBRE2.setText("");
+            TF_EDAD2.setText("");
+            TF_NOMBRE2.setText("");
+            CB_ARMA2.setSelectedIndex(0);
+            TF_SECUESTRADOS.setText("");
         }catch (Exception e){
             JOptionPane.showMessageDialog(this, "Algo salio mal, intente nuevamente!\nVerifique si lleno todos los campos");
         }
@@ -667,9 +728,18 @@ public class MAIN extends javax.swing.JFrame {
     private void BTN_ELIMINARVIVOSMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_ELIMINARVIVOSMouseClicked
         if (t1.getSelectedRow() >= 0) {
             DefaultTableModel m = (DefaultTableModel) t1.getModel();
+            String nombre = (String)m.getValueAt(t1.getSelectedRow(), 0);
+            for (int i = 0; i < campistas.size(); i++) {
+                CAMPISTAS c = campistas.get(i);
+                if (c.getNombre().equals(nombre)) {
+                    campistas.remove(i);
+                }
+            }
             m.removeRow(t1.getSelectedRow());
             t1.setModel(m);
             JOptionPane.showMessageDialog(null, "Se elimino exitosamente");
+        }else{
+            JOptionPane.showMessageDialog(null, "Error, primero seleccione una fila");
         }
     }//GEN-LAST:event_BTN_ELIMINARVIVOSMouseClicked
 
@@ -687,6 +757,8 @@ public class MAIN extends javax.swing.JFrame {
             m.setValueAt(edad, t1.getSelectedRow(), 1);
             t1.setModel(m);
             JOptionPane.showMessageDialog(null, "Se modifico exitosamente");
+        }else{
+            JOptionPane.showMessageDialog(null, "Error, primero seleccione una fila");
         }
     }//GEN-LAST:event_BTN_MODIFICARVIVOSMouseClicked
 
@@ -704,16 +776,27 @@ public class MAIN extends javax.swing.JFrame {
             m.setValueAt(edad, t2.getSelectedRow(), 1);
             t1.setModel(m);
             JOptionPane.showMessageDialog(null, "Se modifico exitosamente");
+        }else{
+            JOptionPane.showMessageDialog(null, "Error, primero seleccione una fila");
         }
     }//GEN-LAST:event_BTN_MODIFICARDESAMouseClicked
 
     private void BTN_ELIMINARDESAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_ELIMINARDESAMouseClicked
         if (t2.getSelectedRow() >= 0) {
             DefaultTableModel m = (DefaultTableModel) t2.getModel();
+            String nombre = (String)m.getValueAt(t2.getSelectedRow(), 0);
+            for (int i = 0; i < campistas.size(); i++) {
+                CAMPISTAS c = campistas.get(i);
+                if (c.getNombre().equals(nombre)) {
+                    campistas.remove(i);
+                }
+            }
             m.removeRow(t2.getSelectedRow());
             t2.setModel(m);
             JOptionPane.showMessageDialog(null, "Se elimino exitosamente");
-        }   
+        } else{
+            JOptionPane.showMessageDialog(null, "Error, primero seleccione una fila");
+        }
     }//GEN-LAST:event_BTN_ELIMINARDESAMouseClicked
 
     private void BTN_MODBOOGIESMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_MODBOOGIESMouseClicked
@@ -721,25 +804,36 @@ public class MAIN extends javax.swing.JFrame {
             DefaultTableModel m = (DefaultTableModel) t3.getModel();
             int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la nueva edad"));
             String nombre = (String)m.getValueAt(t3.getSelectedRow(), 0);
-            for (int i = 0; i < campistas.size(); i++) {
-                CAMPISTAS c = campistas.get(i);
+            for (int i = 0; i < secuestradores.size(); i++) {
+                BoogieWoogie c = secuestradores.get(i);
                 if (c.getNombre().equals(nombre)) {
                     c.setEdad(edad);
                 }
             }
             m.setValueAt(edad, t3.getSelectedRow(), 1);
-            t1.setModel(m);
+            t3.setModel(m);
             JOptionPane.showMessageDialog(null, "Se modifico exitosamente");
-        }
+        }else{
+           JOptionPane.showMessageDialog(null, "Error, primero seleccione una fila");
+       }
     }//GEN-LAST:event_BTN_MODBOOGIESMouseClicked
 
     private void BTN_ELIMINARBOOGIESMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_ELIMINARBOOGIESMouseClicked
        if (t3.getSelectedRow() >= 0) {
-            DefaultTableModel m = (DefaultTableModel) t2.getModel();
+            DefaultTableModel m = (DefaultTableModel) t3.getModel();
+            String nombre = (String)m.getValueAt(t3.getSelectedRow(), 0);
+            for (int i = 0; i < secuestradores.size(); i++) {
+                BoogieWoogie c = secuestradores.get(i);
+                if (c.getNombre().equals(nombre)) {
+                    secuestradores.remove(i);
+                }
+            }
             m.removeRow(t3.getSelectedRow());
             t3.setModel(m);
             JOptionPane.showMessageDialog(null, "Se elimino exitosamente");
-        }   
+        }else{
+           JOptionPane.showMessageDialog(null, "Error, primero seleccione una fila");
+       }
     }//GEN-LAST:event_BTN_ELIMINARBOOGIESMouseClicked
 
     private void BTN_ELIMINARDESAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_ELIMINARDESAActionPerformed
@@ -810,6 +904,9 @@ public class MAIN extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
