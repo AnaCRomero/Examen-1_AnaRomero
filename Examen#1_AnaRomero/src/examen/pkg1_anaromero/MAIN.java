@@ -1,5 +1,4 @@
 package examen.pkg1_anaromero;
-
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
@@ -419,7 +418,7 @@ public class MAIN extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BTN_MODIFICARVIVOS)
-                .addGap(29, 29, 29)
+                .addGap(18, 18, 18)
                 .addComponent(BTN_ELIMINARVIVOS)
                 .addContainerGap())
             .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -495,9 +494,12 @@ public class MAIN extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap(64, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BTN_MODIFICARDESA, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(46, 46, 46)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(46, 46, 46))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addComponent(BTN_MODIFICARDESA)
+                        .addGap(18, 18, 18)))
                 .addComponent(BTN_ELIMINARDESA)
                 .addGap(15, 15, 15))
             .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -738,6 +740,8 @@ public class MAIN extends javax.swing.JFrame {
             m.removeRow(t1.getSelectedRow());
             t1.setModel(m);
             JOptionPane.showMessageDialog(null, "Se elimino exitosamente");
+        }else if(t1.getRowCount()==0){
+            JOptionPane.showMessageDialog(null, "Error. La tabla esta vacia");
         }else{
             JOptionPane.showMessageDialog(null, "Error, primero seleccione una fila");
         }
@@ -757,6 +761,8 @@ public class MAIN extends javax.swing.JFrame {
             m.setValueAt(edad, t1.getSelectedRow(), 1);
             t1.setModel(m);
             JOptionPane.showMessageDialog(null, "Se modifico exitosamente");
+        }else if(t1.getRowCount()==0){
+            JOptionPane.showMessageDialog(null, "Error. La tabla esta vacia");
         }else{
             JOptionPane.showMessageDialog(null, "Error, primero seleccione una fila");
         }
@@ -776,6 +782,8 @@ public class MAIN extends javax.swing.JFrame {
             m.setValueAt(edad, t2.getSelectedRow(), 1);
             t1.setModel(m);
             JOptionPane.showMessageDialog(null, "Se modifico exitosamente");
+        }else if(t2.getRowCount()==0){
+            JOptionPane.showMessageDialog(null, "Error. La tabla esta vacia");
         }else{
             JOptionPane.showMessageDialog(null, "Error, primero seleccione una fila");
         }
@@ -794,13 +802,15 @@ public class MAIN extends javax.swing.JFrame {
             m.removeRow(t2.getSelectedRow());
             t2.setModel(m);
             JOptionPane.showMessageDialog(null, "Se elimino exitosamente");
-        } else{
+        }else if(t2.getRowCount()==0){
+            JOptionPane.showMessageDialog(null, "Error. La tabla esta vacia");
+        }else{
             JOptionPane.showMessageDialog(null, "Error, primero seleccione una fila");
         }
     }//GEN-LAST:event_BTN_ELIMINARDESAMouseClicked
 
     private void BTN_MODBOOGIESMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_MODBOOGIESMouseClicked
-       if (t3.getSelectedRow() >= 0) {
+        if (t3.getSelectedRow() >= 0) {
             DefaultTableModel m = (DefaultTableModel) t3.getModel();
             int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la nueva edad"));
             String nombre = (String)m.getValueAt(t3.getSelectedRow(), 0);
@@ -813,15 +823,17 @@ public class MAIN extends javax.swing.JFrame {
             m.setValueAt(edad, t3.getSelectedRow(), 1);
             t3.setModel(m);
             JOptionPane.showMessageDialog(null, "Se modifico exitosamente");
+        }else if(t3.getRowCount()==0){
+            JOptionPane.showMessageDialog(null, "Error. La tabla esta vacia");
         }else{
-           JOptionPane.showMessageDialog(null, "Error, primero seleccione una fila");
-       }
+            JOptionPane.showMessageDialog(null, "Error, primero seleccione una fila");
+        }
     }//GEN-LAST:event_BTN_MODBOOGIESMouseClicked
 
     private void BTN_ELIMINARBOOGIESMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_ELIMINARBOOGIESMouseClicked
-       if (t3.getSelectedRow() >= 0) {
+        if (t3.getSelectedRow() >= 0) {
             DefaultTableModel m = (DefaultTableModel) t3.getModel();
-            String nombre = (String)m.getValueAt(t3.getSelectedRow(), 0);
+            String nombre = (String) m.getValueAt(t3.getSelectedRow(), 0);
             for (int i = 0; i < secuestradores.size(); i++) {
                 BoogieWoogie c = secuestradores.get(i);
                 if (c.getNombre().equals(nombre)) {
@@ -831,9 +843,11 @@ public class MAIN extends javax.swing.JFrame {
             m.removeRow(t3.getSelectedRow());
             t3.setModel(m);
             JOptionPane.showMessageDialog(null, "Se elimino exitosamente");
+        }else if(t2.getRowCount()==0){
+            JOptionPane.showMessageDialog(null, "Error. La tabla esta vacia");
         }else{
-           JOptionPane.showMessageDialog(null, "Error, primero seleccione una fila");
-       }
+            JOptionPane.showMessageDialog(null, "Error, primero seleccione una fila");
+        }
     }//GEN-LAST:event_BTN_ELIMINARBOOGIESMouseClicked
 
     private void BTN_ELIMINARDESAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_ELIMINARDESAActionPerformed
