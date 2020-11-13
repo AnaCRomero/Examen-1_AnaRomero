@@ -12,7 +12,7 @@ public class BoogieWoogie extends PERSONAS{
         super();
     }
 
-    public BoogieWoogie(String nombre, String sexo, int edad, examen.pkg1_anaromero.ARMAS ARMAS, ArrayList <PERSONAS> secuestrados) {
+    public BoogieWoogie(String nombre, String sexo, int edad, String ARMAS, ArrayList <PERSONAS> secuestrados) {
         super(nombre, sexo, edad, ARMAS);
         this.secuestrados = secuestrados;
     }

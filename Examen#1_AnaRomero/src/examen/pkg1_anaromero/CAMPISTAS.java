@@ -11,7 +11,7 @@ public class CAMPISTAS extends PERSONAS{
         super();
     }
 
-    public CAMPISTAS(String tipo, String estado, String nombre, String sexo, int edad, examen.pkg1_anaromero.ARMAS ARMAS) {
+    public CAMPISTAS(String tipo, String estado, String nombre, String sexo, int edad, String ARMAS) {
         super(nombre, sexo, edad, ARMAS);
         this.tipo = tipo;
         this.estado = estado;

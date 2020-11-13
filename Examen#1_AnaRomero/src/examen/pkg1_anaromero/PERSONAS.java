@@ -6,12 +6,12 @@ package examen.pkg1_anaromero;
 public class PERSONAS {
     private String nombre,sexo;
     private int edad;
-    private ARMAS ARMAS;
+    private String ARMAS;
 
     public PERSONAS() {
     }
 
-    public PERSONAS(String nombre, String sexo, int edad, ARMAS ARMAS) {
+    public PERSONAS(String nombre, String sexo, int edad, String ARMAS) {
         this.nombre = nombre;
         this.sexo = sexo;
         this.edad = edad;
@@ -42,11 +42,11 @@ public class PERSONAS {
         this.edad = edad;
     }
 
-    public ARMAS getARMAS() {
+    public String getARMAS() {
         return ARMAS;
     }
 
-    public void setARMAS(ARMAS ARMAS) {
+    public void setARMAS(String ARMAS) {
         this.ARMAS = ARMAS;
     }
 
