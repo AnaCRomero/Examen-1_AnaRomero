@@ -12,7 +12,13 @@ public class MAIN extends javax.swing.JFrame {
 
     public MAIN() {
         initComponents();
-
+        
+        //Valida que esten selecionados
+        RB_M.setSelected(true);
+        RB_SUPERVISOR.setSelected(true);
+        RB_VIVO.setSelected(true);
+        RB_M2.setSelected(true);
+        
         //-----------------------------------------------------------------------------------------
         //comboBox opciones de armas
         DefaultComboBoxModel modelo = (DefaultComboBoxModel) CB_ARMA.getModel();
@@ -79,13 +85,13 @@ public class MAIN extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         t2 = new javax.swing.JTable();
-        BTN_MODIFICARDESA = new javax.swing.JButton();
-        BTN_ELIMINARDESA = new javax.swing.JButton();
+        BTN_MODIFICARDESAPARECIDO = new javax.swing.JButton();
+        BTN_ELIMINARDESAPARECIDO = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         t3 = new javax.swing.JTable();
-        BTN_MODBOOGIES = new javax.swing.JButton();
+        BTN_MODIFICARBOOGIES = new javax.swing.JButton();
         BTN_ELIMINARBOOGIES = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
 
@@ -463,22 +469,22 @@ public class MAIN extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(t2);
 
-        BTN_MODIFICARDESA.setText("Modificar");
-        BTN_MODIFICARDESA.addMouseListener(new java.awt.event.MouseAdapter() {
+        BTN_MODIFICARDESAPARECIDO.setText("Modificar");
+        BTN_MODIFICARDESAPARECIDO.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BTN_MODIFICARDESAMouseClicked(evt);
+                BTN_MODIFICARDESAPARECIDOMouseClicked(evt);
             }
         });
 
-        BTN_ELIMINARDESA.setText("Eliminar");
-        BTN_ELIMINARDESA.addMouseListener(new java.awt.event.MouseAdapter() {
+        BTN_ELIMINARDESAPARECIDO.setText("Eliminar");
+        BTN_ELIMINARDESAPARECIDO.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BTN_ELIMINARDESAMouseClicked(evt);
+                BTN_ELIMINARDESAPARECIDOMouseClicked(evt);
             }
         });
-        BTN_ELIMINARDESA.addActionListener(new java.awt.event.ActionListener() {
+        BTN_ELIMINARDESAPARECIDO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTN_ELIMINARDESAActionPerformed(evt);
+                BTN_ELIMINARDESAPARECIDOActionPerformed(evt);
             }
         });
 
@@ -498,9 +504,9 @@ public class MAIN extends javax.swing.JFrame {
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(46, 46, 46))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                        .addComponent(BTN_MODIFICARDESA)
+                        .addComponent(BTN_MODIFICARDESAPARECIDO)
                         .addGap(18, 18, 18)))
-                .addComponent(BTN_ELIMINARDESA)
+                .addComponent(BTN_ELIMINARDESAPARECIDO)
                 .addGap(15, 15, 15))
             .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -513,8 +519,8 @@ public class MAIN extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BTN_ELIMINARDESA)
-                    .addComponent(BTN_MODIFICARDESA))
+                    .addComponent(BTN_ELIMINARDESAPARECIDO)
+                    .addComponent(BTN_MODIFICARDESAPARECIDO))
                 .addGap(18, 18, 18))
         );
 
@@ -540,10 +546,10 @@ public class MAIN extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(t3);
 
-        BTN_MODBOOGIES.setText("Modificar");
-        BTN_MODBOOGIES.addMouseListener(new java.awt.event.MouseAdapter() {
+        BTN_MODIFICARBOOGIES.setText("Modificar");
+        BTN_MODIFICARBOOGIES.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BTN_MODBOOGIESMouseClicked(evt);
+                BTN_MODIFICARBOOGIESMouseClicked(evt);
             }
         });
 
@@ -565,7 +571,7 @@ public class MAIN extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(BTN_MODBOOGIES)
+                .addComponent(BTN_MODIFICARBOOGIES)
                 .addGap(18, 18, 18)
                 .addComponent(BTN_ELIMINARBOOGIES)
                 .addGap(18, 18, 18))
@@ -585,7 +591,7 @@ public class MAIN extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BTN_ELIMINARBOOGIES)
-                    .addComponent(BTN_MODBOOGIES))
+                    .addComponent(BTN_MODIFICARBOOGIES))
                 .addGap(24, 24, 24))
         );
 
@@ -633,8 +639,9 @@ public class MAIN extends javax.swing.JFrame {
     private void BTN_CREARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_CREARMouseClicked
         //Para crear una persona campista
 
-        try {
-            String nombre, sexo = "", tipo = "", estado = "";
+        try {         
+            
+            String nombre, sexo, tipo, estado;
             int edad;
             String armas;
 
@@ -693,7 +700,7 @@ public class MAIN extends javax.swing.JFrame {
         //Para crear una persona Boogie Woogie
         
         try{
-            String nombre, sexo = "",armas;
+            String nombre, sexo,armas;
             int edad,secuestados;
             
 
@@ -716,7 +723,7 @@ public class MAIN extends javax.swing.JFrame {
             secuestradores.add(x);
             JOptionPane.showMessageDialog(this, "El BoogieWoogie se agrego a la lista! ");
             
-            //limpia
+            //Limpia
             TF_NOMBRE2.setText("");
             TF_EDAD2.setText("");
             TF_NOMBRE2.setText("");
@@ -768,7 +775,7 @@ public class MAIN extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_BTN_MODIFICARVIVOSMouseClicked
 
-    private void BTN_MODIFICARDESAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_MODIFICARDESAMouseClicked
+    private void BTN_MODIFICARDESAPARECIDOMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_MODIFICARDESAPARECIDOMouseClicked
         if (t2.getSelectedRow() >= 0) {
             DefaultTableModel m = (DefaultTableModel) t2.getModel();
             int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la nueva edad"));
@@ -787,9 +794,9 @@ public class MAIN extends javax.swing.JFrame {
         }else{
             JOptionPane.showMessageDialog(null, "Error, primero seleccione una fila");
         }
-    }//GEN-LAST:event_BTN_MODIFICARDESAMouseClicked
+    }//GEN-LAST:event_BTN_MODIFICARDESAPARECIDOMouseClicked
 
-    private void BTN_ELIMINARDESAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_ELIMINARDESAMouseClicked
+    private void BTN_ELIMINARDESAPARECIDOMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_ELIMINARDESAPARECIDOMouseClicked
         if (t2.getSelectedRow() >= 0) {
             DefaultTableModel m = (DefaultTableModel) t2.getModel();
             String nombre = (String)m.getValueAt(t2.getSelectedRow(), 0);
@@ -807,9 +814,9 @@ public class MAIN extends javax.swing.JFrame {
         }else{
             JOptionPane.showMessageDialog(null, "Error, primero seleccione una fila");
         }
-    }//GEN-LAST:event_BTN_ELIMINARDESAMouseClicked
+    }//GEN-LAST:event_BTN_ELIMINARDESAPARECIDOMouseClicked
 
-    private void BTN_MODBOOGIESMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_MODBOOGIESMouseClicked
+    private void BTN_MODIFICARBOOGIESMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_MODIFICARBOOGIESMouseClicked
         if (t3.getSelectedRow() >= 0) {
             DefaultTableModel m = (DefaultTableModel) t3.getModel();
             int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la nueva edad"));
@@ -828,7 +835,7 @@ public class MAIN extends javax.swing.JFrame {
         }else{
             JOptionPane.showMessageDialog(null, "Error, primero seleccione una fila");
         }
-    }//GEN-LAST:event_BTN_MODBOOGIESMouseClicked
+    }//GEN-LAST:event_BTN_MODIFICARBOOGIESMouseClicked
 
     private void BTN_ELIMINARBOOGIESMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_ELIMINARBOOGIESMouseClicked
         if (t3.getSelectedRow() >= 0) {
@@ -850,9 +857,9 @@ public class MAIN extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_BTN_ELIMINARBOOGIESMouseClicked
 
-    private void BTN_ELIMINARDESAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_ELIMINARDESAActionPerformed
+    private void BTN_ELIMINARDESAPARECIDOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_ELIMINARDESAPARECIDOActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BTN_ELIMINARDESAActionPerformed
+    }//GEN-LAST:event_BTN_ELIMINARDESAPARECIDOActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -867,22 +874,16 @@ public class MAIN extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MAIN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MAIN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MAIN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MAIN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        
+        //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MAIN().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new MAIN().setVisible(true);
         });
     }
 
@@ -890,10 +891,10 @@ public class MAIN extends javax.swing.JFrame {
     private javax.swing.JButton BTN_CREAR;
     private javax.swing.JButton BTN_CREAR2;
     private javax.swing.JButton BTN_ELIMINARBOOGIES;
-    private javax.swing.JButton BTN_ELIMINARDESA;
+    private javax.swing.JButton BTN_ELIMINARDESAPARECIDO;
     private javax.swing.JButton BTN_ELIMINARVIVOS;
-    private javax.swing.JButton BTN_MODBOOGIES;
-    private javax.swing.JButton BTN_MODIFICARDESA;
+    private javax.swing.JButton BTN_MODIFICARBOOGIES;
+    private javax.swing.JButton BTN_MODIFICARDESAPARECIDO;
     private javax.swing.JButton BTN_MODIFICARVIVOS;
     private javax.swing.JComboBox<String> CB_ARMA;
     private javax.swing.JComboBox<String> CB_ARMA2;

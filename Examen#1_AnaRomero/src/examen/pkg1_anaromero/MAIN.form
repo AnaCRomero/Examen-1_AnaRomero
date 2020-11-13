@@ -135,7 +135,7 @@
                                               <Component id="RB_M" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="RB_F" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace pref="157" max="32767" attributes="0"/>
+                                              <EmptySpace pref="348" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -735,11 +735,11 @@
                                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="BTN_MODIFICARDESA" min="-2" max="-2" attributes="0"/>
+                                      <Component id="BTN_MODIFICARDESAPARECIDO" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Component id="BTN_ELIMINARDESA" min="-2" max="-2" attributes="0"/>
+                              <Component id="BTN_ELIMINARDESAPARECIDO" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jLabel15" alignment="1" max="32767" attributes="0"/>
@@ -754,8 +754,8 @@
                               <Component id="jScrollPane2" min="-2" pref="159" max="-2" attributes="0"/>
                               <EmptySpace pref="27" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="BTN_ELIMINARDESA" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="BTN_MODIFICARDESA" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="BTN_ELIMINARDESAPARECIDO" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="BTN_MODIFICARDESAPARECIDO" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           </Group>
@@ -784,21 +784,21 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JButton" name="BTN_MODIFICARDESA">
+                    <Component class="javax.swing.JButton" name="BTN_MODIFICARDESAPARECIDO">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Modificar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BTN_MODIFICARDESAMouseClicked"/>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BTN_MODIFICARDESAPARECIDOMouseClicked"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="BTN_ELIMINARDESA">
+                    <Component class="javax.swing.JButton" name="BTN_ELIMINARDESAPARECIDO">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Eliminar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BTN_ELIMINARDESAMouseClicked"/>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTN_ELIMINARDESAActionPerformed"/>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BTN_ELIMINARDESAPARECIDOMouseClicked"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTN_ELIMINARDESAPARECIDOActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel15">
@@ -832,7 +832,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="BTN_MODBOOGIES" min="-2" max="-2" attributes="0"/>
+                              <Component id="BTN_MODIFICARBOOGIES" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="BTN_ELIMINARBOOGIES" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
@@ -855,7 +855,7 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="BTN_ELIMINARBOOGIES" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="BTN_MODBOOGIES" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="BTN_MODIFICARBOOGIES" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                           </Group>
@@ -884,12 +884,12 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JButton" name="BTN_MODBOOGIES">
+                    <Component class="javax.swing.JButton" name="BTN_MODIFICARBOOGIES">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Modificar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BTN_MODBOOGIESMouseClicked"/>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BTN_MODIFICARBOOGIESMouseClicked"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="BTN_ELIMINARBOOGIES">
